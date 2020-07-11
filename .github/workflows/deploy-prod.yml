@@ -1,0 +1,19 @@
+name: Production deployment
+
+on: 
+  push:
+    branches:
+      - master
+
+env:
+  PACKAGES_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+  AZURE_RESOURCE_GROUP: cd-with-actions
+  AZURE_APP_PLAN: actions-ttt-deployment
+  AZURE_LOCATION: '"Central US"'
+  #################################################
+  ### USER PROVIDED VALUES ARE REQUIRED BELOW   ###
+  #################################################
+  #################################################
+  ### REPLACE USERNAME WITH GH USERNAME         ###
+  AZURE_WEBAPP_NAME: ocben1-ttt-app
+  #################################################
